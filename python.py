@@ -44,6 +44,6 @@ with sync_playwright() as playwright_:
         sleep(2)
         page.locator("[data-test=\"form__submit-btn\"]").click()
         print(3)
-
+print('concluido')
 
 
