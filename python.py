@@ -43,5 +43,7 @@ with sync_playwright() as playwright_:
         page.get_by_role("spinbutton", name="Hour").fill("03")
         sleep(2)
         page.locator("[data-test=\"form__submit-btn\"]").click()
+        print(3)
+
 
 
