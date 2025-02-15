@@ -7,9 +7,11 @@ with sync_playwright() as playwright_:
         context_ = browser_.new_context()
         page = context_.new_page()
 
-        dia_atual = datetime.now().day
-        print(dia_atual)
-        page.goto("https://forms.clickup.com/9013267565/f/8ckq33d-5753/3E2W0RUBRY1S9V29OO")
+        dia_atual = datetime.now().strftime('%d')
+        dia_mes_atual = datetime.now().strftime('%m')
+
+
+        page.goto("https://forms.clickup.com/9013267565/f/8ckq33d-6193/825PILOAA5DREE9S64")
         sleep(1.5)
         page.locator("[data-test=\"form__body-item__RE\"] [data-test=\"select__dropdown__toggle\"]").click()
         sleep(1)
@@ -26,7 +28,7 @@ with sync_playwright() as playwright_:
         sleep(1)
         page.locator("[data-test=\"form__date-picker-input-start-date\"]").click()
         sleep(1)
-        page.get_by_label(str(dia_atual)).first.click()
+        page.get_by_label(f"February {dia_atual}").click(force=True)
         sleep(1)
         page.get_by_role("spinbutton", name="Hour").fill("08")
         sleep(1)
@@ -42,7 +44,8 @@ with sync_playwright() as playwright_:
         sleep(1)
         page.get_by_role("spinbutton", name="Hour").fill("03")
         sleep(2)
-        page.locator("[data-test=\"form__submit-btn\"]").click()
+        
+        # page.locator("[data-test=\"form__submit-btn\"]").click()
         print(3)
 print('concluido')
 
