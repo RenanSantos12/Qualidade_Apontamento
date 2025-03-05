@@ -13,7 +13,6 @@ with sync_playwright() as playwright_:
         print(dia_atual)
         print(mes_)
 
-
         page.goto("https://forms.clickup.com/9013267565/f/8ckq33d-6313/LIRPXERWM7K3PMYXWV")
         sleep(1.5)
         page.locator("[data-test=\"form__body-item__RE\"] [data-test=\"select__dropdown__toggle\"]").click()
