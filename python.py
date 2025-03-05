@@ -1,6 +1,6 @@
 from playwright.sync_api import sync_playwright
-from time import sleep
 from datetime import datetime
+from time import sleep
 
 with sync_playwright() as playwright_:
         browser_ = playwright_.chromium.launch(headless=False)
