@@ -1,19 +1,18 @@
 from playwright.sync_api import sync_playwright
 from datetime import datetime
 from time import sleep
-
 from time import sleep
 
 
 class Apontamento:
 
         def __init__(self):
-
                 self.dia_atual = datetime.now().strftime('%d').lstrip('0')
                 self.dia_mes_atual = datetime.now().strftime('%m')
                 self.mes_ = datetime.today().strftime('%B')
                 print(self.dia_atual)
                 print(self.mes_)
+
         def site(self):
                 with sync_playwright() as playwright_:
                         browser_ = playwright_.chromium.launch(headless=False)
@@ -45,7 +44,7 @@ class Apontamento:
                         if not check_manha:
                                 page.get_by_text("PM").nth(1).click()
                         sleep(1)
-                        page.get_by_role("button", name="Selecione a data de vencimento").click()
+                        page.get_by_role("button", name="Select Due Date").click()
                         sleep(1)
                         page.get_by_label(f"{self.mes_} {self.dia_atual},").nth(1).click()
                         if '/html/body/div[2]/div[3]/span[2]':
@@ -60,14 +59,9 @@ class Apontamento:
                 print('concluido')
 
 if __name__ == "__main__":
-
         execute = Apontamento()
         execute.site()
 
-
-if __name__ == "__main__":
-        execute = Apontamento()
-        execute.site()
 
 
 
