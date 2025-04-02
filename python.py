@@ -19,7 +19,7 @@ class Apontamento:
                         context_ = browser_.new_context()
                         page = context_.new_page()
 
-                        page.goto("https://forms.clickup.com/9013267565/f/8ckq33d-6313/LIRPXERWM7K3PMYXWV")
+                        page.goto("https://forms.clickup.com/9013267565/f/8ckq33d-6433/O5C5F3EUV4JK6DWV0P")
                         sleep(5)
                         page.locator("[data-test=\"form__body-item__RE\"] [data-test=\"select__dropdown__toggle\"]").click()
                         sleep(1)
