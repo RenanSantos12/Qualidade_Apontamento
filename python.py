@@ -3,7 +3,6 @@ from datetime import datetime
 from time import sleep
 from time import sleep
 
-
 class Apontamento:
 
         def __init__(self):
