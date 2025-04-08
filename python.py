@@ -1,7 +1,6 @@
 from playwright.sync_api import sync_playwright
 from datetime import datetime
 from time import sleep
-from time import sleep
 
 class Apontamento:
 
