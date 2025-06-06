@@ -42,7 +42,6 @@ class Apontamento:
             sleep(1.5)
             page.get_by_role("spinbutton", name="Hour").fill("08")
             sleep(1.5)
-            print(1)
             check_manha = '/html/body/div[1]/div[3]/span[2]'
             if not check_manha:
                 print(2)
@@ -61,7 +60,6 @@ class Apontamento:
             sleep(1)
             page.locator("[data-test=\"form__submit-btn\"]").click()
             sleep(3)
-            print(3)
         print('concluido')
 
 
