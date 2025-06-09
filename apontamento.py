@@ -102,7 +102,6 @@ class Apontamento:
         sleep(3)
         print('concluido')
 
-
 if __name__ == "__main__":
     with sync_playwright() as playwright_:
         browser_ = playwright_.chromium.launch(headless=False)
