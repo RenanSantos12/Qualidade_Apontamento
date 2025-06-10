@@ -6,7 +6,6 @@ import random
 
 class Apontamento:
     def __init__(self):
-
         # self.dia_atual = datetime.now().strftime('%d').lstrip('0')
         # self.dia_mes_atual = datetime.now().strftime('%m')
         # self.mes_ = datetime.today().strftime('%B')
