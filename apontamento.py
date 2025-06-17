@@ -3,7 +3,6 @@ from datetime import datetime
 from time import sleep
 import random
 
-
 class Apontamento:
     def __init__(self):
         self.dia_atual = datetime.now().strftime('%d').lstrip('0')
@@ -54,7 +53,7 @@ class Apontamento:
         sleep(2)
         page.locator('xpath=//*[@id="cu-form-control-5"]').click()
         sleep(1)
-        page.locator("[data-test=\"form__submit-btn\"]").click()
+        # page.locator("[data-test=\"form__submit-btn\"]").click()
         sleep(5)
         print('concluido')
 
@@ -98,7 +97,7 @@ class Apontamento:
         sleep(2)
         page.locator('xpath=//*[@id="cu-form-control-5"]').click()
         sleep(1)
-        page.locator("[data-test=\"form__submit-btn\"]").click()
+        # page.locator("[data-test=\"form__submit-btn\"]").click()
         sleep(3)
         print('concluido')
 
