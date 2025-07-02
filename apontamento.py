@@ -21,8 +21,7 @@ class Apontamento:
         sleep(1)
         page.get_by_role("option", name="- RENAN SANTOS ARAUJO").locator("div").nth(1.5).click()
         sleep(1)
-        page.locator(
-            "[data-test=\"form__body-item__Cliente - Projeto\"] [data-test=\"select__dropdown__toggle\"]").click()
+        page.locator("[data-test=\"form__body-item__Cliente - Projeto\"] [data-test=\"select__dropdown__toggle\"]").click()
         sleep(1)
         projeto = random.choice(self.trabalho)
         print(projeto)
