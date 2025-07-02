@@ -13,7 +13,7 @@ class Apontamento:
         print(self.mes_)
 
     def parte1(self, page):
-        page.goto("https://forms.clickup.com/9013267565/f/8ckq33d-6673/48PU0U96L8AJ2EFQQJ")
+        page.goto("https://forms.clickup.com/9013267565/f/8ckq33d-9313/K13NOYVFNI70YT4ALA")
         sleep(5)
         page.locator("[data-test=\"form__body-item__RE\"] [data-test=\"select__dropdown__toggle\"]").click()
         sleep(1)
@@ -32,7 +32,7 @@ class Apontamento:
         sleep(1)
         page.locator("[data-test=\"form__date-picker-input-start-date\"]").click(force=True)
         sleep(1)
-        page.get_by_label(f"{self.mes_} {self.dia_atual},").first.click()
+        page.locator("[data-test=\"form__body-item__Start date\"]").get_by_label(f"{self.mes_} {self.dia_atual},").click()
         sleep(1)
         page.get_by_role("spinbutton", name="Hour").fill("08")
         sleep(1)
@@ -53,12 +53,12 @@ class Apontamento:
         sleep(2)
         page.locator('xpath=//*[@id="cu-form-control-5"]').click()
         sleep(1)
-        # page.locator("[data-test=\"form__submit-btn\"]").click()
+        page.locator("[data-test=\"form__submit-btn\"]").click()
         sleep(5)
         print('concluido')
 
     def parte2(self, page):
-        page.goto("https://forms.clickup.com/9013267565/f/8ckq33d-6673/48PU0U96L8AJ2EFQQJ")
+        page.goto("https://forms.clickup.com/9013267565/f/8ckq33d-9313/K13NOYVFNI70YT4ALA")
         sleep(5)
         page.locator("[data-test=\"form__body-item__RE\"] [data-test=\"select__dropdown__toggle\"]").click()
         sleep(1)
@@ -77,7 +77,7 @@ class Apontamento:
         sleep(1)
         page.locator("[data-test=\"form__date-picker-input-start-date\"]").click(force=True)
         sleep(1)
-        page.get_by_label(f"{self.mes_} {self.dia_atual},").first.click()
+        page.locator("[data-test=\"form__body-item__Start date\"]").get_by_label(f"{self.mes_} {self.dia_atual},").click()
         sleep(1)
         page.get_by_role("spinbutton", name="Hour").fill("13")
         sleep(1)
@@ -97,7 +97,7 @@ class Apontamento:
         sleep(2)
         page.locator('xpath=//*[@id="cu-form-control-5"]').click()
         sleep(1)
-        # page.locator("[data-test=\"form__submit-btn\"]").click()
+        page.locator("[data-test=\"form__submit-btn\"]").click()
         sleep(3)
         print('concluido')
 
