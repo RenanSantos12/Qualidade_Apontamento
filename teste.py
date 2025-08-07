@@ -10,7 +10,7 @@ class Apontamento:
         # self.dia_atual = datetime.now().strftime('%d').lstrip('0')
         # self.dia_mes_atual = datetime.now().strftime('%m')
         # self.mes_ = datetime.today().strftime('%B')
-        self.dia_atual = int(15)
+        self.dia_atual = int(31)
         self.mes_ = 'July'
         self.trabalho = ['Fiscal faturamento', 'RPA Qualidade', 'RPA CND']
         print(self.dia_atual)
