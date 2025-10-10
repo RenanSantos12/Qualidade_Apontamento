@@ -1,13 +1,16 @@
 from playwright.sync_api import sync_playwright
-from datetime import datetime
 from time import sleep
 import random
 
+
 class Apontamento:
+
     def __init__(self):
-        self.dia_atual = datetime.now().strftime('%d').lstrip('0')
-        self.dia_mes_atual = datetime.now().strftime('%m')
-        self.mes_ = datetime.today().strftime('%B')
+        # self.dia_atual = datetime.now().strftime('%d').lstrip('0')
+        # self.dia_mes_atual = datetime.now().strftime('%m')
+        # self.mes_ = datetime.today().strftime('%B')
+        self.dia_atual = int(10)
+        self.mes_ = 'October'
         self.trabalho = ['Fiscal faturamento', 'RPA Qualidade', 'RPA CND']
         print(self.dia_atual)
         print(self.mes_)
@@ -111,8 +114,6 @@ class Apontamento:
         sleep(3)
         print('concluido')
 
-
-
 if __name__ == "__main__":
     with sync_playwright() as playwright_:
         browser_ = playwright_.chromium.launch(headless=False)
@@ -121,4 +122,7 @@ if __name__ == "__main__":
 
         execute = Apontamento()
         execute.parte1(page_)
-        execute.parte2(page_)
+        # execute.parte2(page_)
+
+
+
