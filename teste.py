@@ -2,7 +2,6 @@ from playwright.sync_api import sync_playwright
 from time import sleep
 import random
 
-
 class Apontamento:
 
     def __init__(self):
