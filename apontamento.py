@@ -71,7 +71,6 @@ class Apontamento:
         page.locator("[data-test=\"form__submit-btn\"]").click()
         sleep(3)
 
-
     def parte2(self, page):
         page.goto("https://forms.clickup.com/9013267565/f/8ckq33d-9313/K13NOYVFNI70YT4ALA")
         sleep(5)
@@ -121,4 +120,4 @@ if __name__ == "__main__":
 
         execute = Apontamento()
         execute.parte1(page_)
-        execute.parte2(page_)
+        # execute.parte2(page_)
