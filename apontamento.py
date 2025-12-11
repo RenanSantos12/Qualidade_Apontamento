@@ -13,7 +13,7 @@ class Apontamento:
         print(self.mes_)
 
     def parte1(self, page):
-        page.goto("https://forms.clickup.com/9013267565/f/8ckq33d-10313/DSAPWIX3VRL5AU5NL2")
+        page.goto("https://forms.clickup.com/9013267565/f/8ckq33d-11993/5GCZKRV3FZPKLCXY1Q")
         sleep(5)
         page.locator("[data-test=\"form__body-item__RE\"] [data-test=\"select__dropdown__toggle\"]").click()
         sleep(1)
