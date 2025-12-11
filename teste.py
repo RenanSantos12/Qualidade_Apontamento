@@ -6,13 +6,13 @@ import random
 class Apontamento:
 
     def __init__(self):
-        self.dia_atual = 3, 4
-        self.mes_ = 'November'
+        self.dia_atual = 1, 2, 3, 4, 5
+        self.mes_ = 'December'
         self.trabalho = ['Fiscal faturamento', 'RPA Qualidade', 'RPA CND']
 
     def parte1(self, page, dia_atual):
         try:
-            page.goto("https://forms.clickup.com/9013267565/f/8ckq33d-11993/5GCZKRV3FZPKLCXY1Q")
+            page.goto("https://forms.clickup.com/9013267565/f/8ckq33d-13053/F5L8OKVQB2JT09UA32")
             sleep(5)
             page.locator("[data-test=\"form__body-item__RE\"] [data-test=\"select__dropdown__toggle\"]").click()
             sleep(1)
@@ -57,8 +57,8 @@ class Apontamento:
             sleep(0.5)
             page.get_by_role("spinbutton", name="Hour").press("Enter")
             page.get_by_role("textbox", name="Unidade de Produção").click()
-            sleep(1)
-            page.locator("[data-test=\"form__submit-btn\"]").click()
+            #sleep(1)
+            #page.locator("[data-test=\"form__submit-btn\"]").click()
             sleep(3)
         except Exception as erro_site:
             print('Erro ao tentar apertar apontar no site', erro_site)
@@ -107,7 +107,14 @@ class Apontamento:
     def run(self, page):
         dias = self.dia_atual
         for dia in dias:
-            self.parte1(page, dia)
+            try:
+                self.parte1(page, dia)
+            except Exception as e:
+                print(f'Erro ao apontar o dia {dia}')
+                page.close()
+                sleep(3)
+                continue
+
 
 
 
